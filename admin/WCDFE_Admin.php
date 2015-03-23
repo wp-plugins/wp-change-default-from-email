@@ -60,7 +60,7 @@ if ( !class_exists( 'WCDFE_Admin' ) ) {
 		 * @since 1.0.0
 		 */
 		public function register_admin_menu() {
-			add_options_page( WCDFE_PLUGIN_NAME.' Settings', 'Change From Email', 'manage_options', 'wcdfe_settings', array( &$this, 'settings' ) );
+			add_options_page( WCDFE_PLUGIN_NAME.' Settings', __( 'Change From Email', WCDFE_TEXTDOMAIN ), 'manage_options', 'wcdfe_settings', array( &$this, 'settings' ) );
 		}
 
 		public function settings() {

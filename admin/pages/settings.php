@@ -1,7 +1,7 @@
 <?php $wcdfe_settings = get_option( 'wcdfe_settings' ); ?>
 <div class="wrap about-wrap">
 	<h1><?php echo __( WCDFE_PLUGIN_NAME, WCDFE_TEXTDOMAIN ); ?></h1>
-	<div class="about-text"><?php echo __( 'Manage '.WCDFE_PLUGIN_NAME.' settings here.', WCDFE_TEXTDOMAIN ); ?></div>
+	<div class="about-text"><?php echo __( 'Manage WP Change Default From Email settings here.', WCDFE_TEXTDOMAIN ); ?></div>
 
 	<h2 class="nav-tab-wrapper">
 		<a class="nav-tab" data-tab="wcdfe-settings" href="#wcdfe-settings" id="wcdfe-settings-tab"><?php echo __( 'Settings', WCDFE_TEXTDOMAIN ); ?></a>
@@ -16,7 +16,7 @@
 				<div class="wcdfe-row">
 					
 					<div class="wcdfe-col-12">
-						<span class="wcdfe-addon-label">Enable/Disable</span>
+						<span class="wcdfe-addon-label"><?php echo __( 'Enable/Disable', WCDFE_TEXTDOMAIN ); ?></span>
 						<span class="wcdfe-addon-switch">
 							<div class="wcdfe-onoffswitch">
 							    <input type="checkbox" name="wcdfe_settings[enable]" class="wcdfe-onoffswitch-checkbox" id="wcdfe_enable" value="1"  <?php if(isset($wcdfe_settings['enable']) && $wcdfe_settings['enable'] == 1) echo 'checked="checked"'; ?>>
@@ -29,17 +29,17 @@
 					</div>
 
 					<div class="wcdfe-col-12">
-						<span class="wcdfe-addon-label">From Name</span>
+						<span class="wcdfe-addon-label"><?php echo __( 'From Name', WCDFE_TEXTDOMAIN ); ?></span>
 						<span class="wcdfe-addon-switch">
 							<input type="text" name="wcdfe_settings[from_name]" size="100" value="<?php if(isset($wcdfe_settings['from_name'])) echo $wcdfe_settings['from_name']; ?>" placeholder="<?php echo get_bloginfo('name');?>">
 						</span>
 					</div>
 
 					<div class="wcdfe-col-12">
-						<span class="wcdfe-addon-label">From Email</span>
+						<span class="wcdfe-addon-label"><?php echo __( 'From Email', WCDFE_TEXTDOMAIN ); ?></span>
 						<span class="wcdfe-addon-switch">
 							<input type="text" name="wcdfe_settings[from_email]" size="100" value="<?php if(isset($wcdfe_settings['from_email'])) echo $wcdfe_settings['from_email']; ?>" placeholder="<?php echo get_bloginfo('admin_email');?>">
-							<small>To avoid your email being marked as spam, it is highly recommended that your "from" domain match your website.</small>
+							<small><?php echo __( 'To avoid your email being marked as spam, it is highly recommended that your "from" domain match your website.', WCDFE_TEXTDOMAIN ); ?></small>
 						</span>
 					</div>
 
@@ -49,7 +49,7 @@
 		</form>
 		
 		<div class="wcdfe-save-settings-container">
-			<input type="submit" value="Save Settings" class="button button-large button-primary" id="wcdfe-save-settings" name="save_settings">
+			<input type="submit" value="<?php echo __( 'Save Settings', WCDFE_TEXTDOMAIN ); ?>" class="button button-large button-primary" id="wcdfe-save-settings" name="save_settings">
 			<div id="wcdfe-error-message"></div>
 		</div>
 
@@ -58,12 +58,12 @@
 		<div class="changelog feature-list">
 			<div class="feature-section col two-col">
 				<div>
-					<h4>If mails are going in spam.</h4>
-					<p>To avoid your email being marked as spam, it is highly recommended that your domain name in 'From Email' must match with your website, i.e. if your website is <code>www.example.com</code> then your email must hosted on <code>@example.com</code>.</p>
+					<h4><?php echo __( 'If mails are going in spam.', WCDFE_TEXTDOMAIN ); ?></h4>
+					<p><?php echo __( "To avoid your email being marked as spam, it is highly recommended that your domain name in 'From Email' must match with your website, i.e. if your website is <code>www.example.com</code> then your email must hosted on <code>@example.com</code>.", WCDFE_TEXTDOMAIN ); ?></p>
 				</div>
 				<div class="last-feature">
-					<h4>Do you offer support?</h4>
-					<p>You can contact me at my email address <code><a href="http://www.google.com/recaptcha/mailhide/d?k=0136qbakbr7_ceyXoPHsmVVQ==&amp;c=60v3eLAIgOrXwFfGeOGB0QlS6nvCSU4NYwHHs2w0JuQ=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\0750136qbakbr7_ceyXoPHsmVVQ\75\75\46c\07560v3eLAIgOrXwFfGeOGB0QlS6nvCSU4NYwHHs2w0JuQ\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">su...@gmail.com</a></code></p>
+					<h4><?php echo __( 'Do you offer support?', WCDFE_TEXTDOMAIN ); ?></h4>
+					<p><?php echo __( 'You can contact me at my email address', WCDFE_TEXTDOMAIN ); ?> <code><a href="http://www.google.com/recaptcha/mailhide/d?k=0136qbakbr7_ceyXoPHsmVVQ==&amp;c=60v3eLAIgOrXwFfGeOGB0QlS6nvCSU4NYwHHs2w0JuQ=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\0750136qbakbr7_ceyXoPHsmVVQ\75\75\46c\07560v3eLAIgOrXwFfGeOGB0QlS6nvCSU4NYwHHs2w0JuQ\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">su...@gmail.com</a></code></p>
 				</div>
 			</div>
 
@@ -115,7 +115,7 @@ jQuery(document).ready(function(e) {
 				} else if(response.status == "error") {
 					jQuery("#wcdfe-error-message").html('<div class="error"><p>'+response.message+'</p></div>');
 				} else {
-					jQuery("#wcdfe-error-message").html('<div class="error"><p>No settings were saved.</p></div>');
+					jQuery("#wcdfe-error-message").html('<div class="error"><p><?php echo __( "No settings were saved.", WCDFE_TEXTDOMAIN ); ?></p></div>');
 				}
 			}
 		});

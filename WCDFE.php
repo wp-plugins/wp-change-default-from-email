@@ -5,7 +5,7 @@
  * Text Domain: WCDFE_translation
  * Domain Path: /languages
  * Description: A simple and easy way to change the from email address and from email name that appear on emails sent from WordPress.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Subodh Ghulaxe
  * Author URI: 
  */

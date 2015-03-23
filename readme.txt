@@ -1,5 +1,5 @@
 === WP Change Default From Email ===
-Contributors: subodhghulaxe
+Contributors: subodhghulaxe, smitkalwal
 Tags: change from email, change default from email, email, wp email, wp default email, from email
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=9SDYCPQW2HH4Q&lc=IN&item_name=Subodh%20Ghulaxe&item_number=WP%20Change%20Default%20From%20Email¤cy_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Requires at least: 2.7
@@ -19,6 +19,17 @@ This plugin lets you change the from email address and from email name that appe
 * **Customize From Name.** Change from name easily
 * **Easy Settings.** Easy to enable/disable and change settings
 * **Clean & Well Commented Code.** Easy to enable/disable and change settings
+
+**Translations/Languages:**
+This plugin is available in the following languages:
+
+* English
+* Deutsch/Deutschland
+* Español/España
+* Français/France
+* Русский/Россия
+* العربية/السعودية
+
 
 == Installation ==
 = From your WordPress dashboard =
@@ -49,6 +60,12 @@ You can contact me at my email address <a href="http://www.google.com/recaptcha/
 = 1.0.0 =
 Initial release
 
+= 1.1.0 =
+Added language files
+
 == Upgrade Notice ==
 = 1.0.0 =
 Initial release
+
+= 1.1.0 =
+Added language files
